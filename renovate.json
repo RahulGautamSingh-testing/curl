@@ -1,0 +1,14 @@
+{
+ "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+ "regexManagers": [
+   {
+      "fileMatch": ["^curl.version$"],
+      "matchStrings": ["^(?<currentValue>.*)"],
+      "depNameTemplate": "curl",
+      "extractVersionTemplate": "^curl-(?<version>.*)$",
+      "packageNameTemplate": "curl/curl",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "regex:(^curl-)?(?<major>\\d+)[_.](?<minor>\\d+)[_.](?<patch>\\d+)?$"
+    }
+]
+}
